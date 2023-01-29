@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application</title>
+    <link rel="icon" type="images/x-icon" href="logo_white.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <nav class="navbar bg-dark navbar-expand-lg" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="logo_white.png" alt="Logo" width="60" height="50"  class="d-inline-block align-text-center">
+                Weather App
+              </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="" id="home">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  More Weather Information
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="https://www.accuweather.com/" target="_blank" rel="noopener noreferrer">Accuweather</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="https://www.weather.com/" target="_blank" rel="noopener noreferrer">Weather.com</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="https://www.timeanddate.com/weather/" target="_blank" rel="noopener noreferrer">TimeAndDate</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="windy.com" target="_blank" rel="noopener noreferrer">Windy</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="about.html" id="about">About</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
+              <button class="btn btn-outline-secondary" type="submit" id="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <p><h1 class="display-4" style="font-weight: 400;color: rgb(104, 72, 18);margin-left: 20px"><span id="cityName"></span> Weather</h1></p>
+      <p><h3 style="font-weight: 500; color: rgb(126, 94, 25); margin-left: 20px;"  ><span id="date"></span></h3></p>
+      <div class="main-content">
+        <div class="city-card">
+          <div style="padding-left: 1em;padding-right: 1em; ">
+            <div class="time">
+              <div>Current Weather</div> 
+              <div id="currentTime">11:00 AM</div>
+            </div>
+          </div>
+          <div class="all-attributes">
+            <div class="attribute">
+              <div  class="titles">Temperature</div>
+              <div><span id="temp"></span> Degree C</div>
+            </div>
+            <div class="attribute">
+              <div class="titles">Feels Like Temperature</div>
+              <div><span id="feels_like"></span> Degree C</div>
+            </div>
+            <div class="attribute">
+              <div class="titles">Max Temperature</div>
+              <div><span id="max_temp"></span> Degree C</div></div>
+            <div class="attribute">
+              <div class="titles">Min Temperature</div>
+              <div><span id="min_temp"></span> Degree C</div>
+            </div>
+            <div class="attribute">
+              <div class="titles">Humidity</div>
+              <div><span id="humidity"></span>%</div>
+            </div>
+            <div class="attribute">
+              <div class="titles">Wind Speed</div>
+              <div><span id="wind_speed"></span> KMPH</div>
+            </div>
+            <div class="attribute" style="border: none;">
+              <div class="titles">Sunrise</div>
+              <div><span id="sunrise"></span></div>
+            </div>
+            <div class="attribute" style="border: none;">
+              <div class="titles">Sunset</div>
+              <div><span id="sunset"></span></div>
+            </div>
+          </div >
+        </div>
+        <div class="more-cities">
+          <div style="padding-left: 1em;padding-right: 1em; ">
+          <div><h2  style="font-weight: 500; color: rgb(126, 94, 25); padding-top: 0.5em; padding-bottom: 0.5em; border-bottom: 1px black solid;">Other Cities</h2></div>
+          </div>
+          <div class="other-cities">
+            <div class="city-image"><img src="delhi.jpg" alt="" width="60" height="50"></div>
+            <a id="delhi" href="" style="text-decoration: none"><div class="otherCity">Delhi</div></a>
+            
+          </div>
+          <div class="other-cities">
+            
+            <div  class="city-image"><img src="mumbai.jpg" alt="" width="60" height="50"></div>
+            <a id="mumbai" href="" style="text-decoration: none"><div  class="otherCity">Mumbai</div></a>
+          </div>
+          <div class="other-cities">
+            
+            <div class="city-image"><img src="bangalore.jpg" alt="" width="60" height="50"></div>
+            <a id="bangalore" href="" style="text-decoration: none"><div class="otherCity">Bangalore</div></a>
+          </div>
+          <div class="other-cities">
+            
+            <div class="city-image"><img src="kolkata.jpg" alt="" width="60" height="50"> </div>
+            <a id="kolkata" href="" style="text-decoration: none"><div class="otherCity">Kolkata</div></a>
+          </div>
+        </div>
+      </div>
+
+      
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

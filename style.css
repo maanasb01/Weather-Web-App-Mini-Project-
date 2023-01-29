@@ -1,0 +1,91 @@
+body {
+    background-color: rgba(224, 161, 53, 0.874);
+}
+
+.attribute {
+    display: flex;
+    border-bottom: 1px grey solid;
+    justify-content: space-between;
+    width: 18em;
+    padding: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.time {
+    display: flex;
+    width: 100%;
+
+    border-bottom: 1px black solid;
+    justify-content: space-between;
+    color: rgb(123, 96, 37);
+    font-weight: 500;
+    padding-bottom: 0.5em;
+    padding-top: 1em;
+    /* padding-left: 1em;
+    padding-right: 1em; */
+}
+
+.city-card {
+    border: 1px black solid;
+    width: 40em;  
+    height: auto;
+    background-color: rgba(232, 209, 170, 0.874);
+    border: none;;
+    
+}
+.all-attributes {
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.other-cities {
+    border-bottom: none;
+    padding: 0.5em;
+    padding-top: 1px;
+    
+    
+   
+}
+
+
+
+.more-cities {
+    border: none;
+    background-color: rgba(232, 209, 170, 0.874);
+    width: 20em;
+
+}
+
+.titles {
+    color: rgb(123, 96, 37);
+    font-weight: 500;
+}
+
+.other-cities:after {
+    content: '';
+    display: block;
+    position: relative;
+    width: 100%;
+    border: 1px solid rgb(123, 96, 37);
+    margin-top: 8px; 
+}
+
+.otherCity {
+    color: rgb(126, 94, 25);
+    font-weight: 700;
+    display: inline-block;
+}
+
+.city-image {
+    display: inline-block;
+}
