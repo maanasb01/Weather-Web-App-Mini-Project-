@@ -89,3 +89,13 @@ body {
 .city-image {
     display: inline-block;
 }
+
+#aboutData {
+    width: 40em;
+    height: auto;
+    margin: auto;
+    background-color: rgba(232, 209, 170, 0.874);
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
